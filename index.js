@@ -3,13 +3,20 @@ var EOL = require('os').EOL
 function fail() {
   process.exit(1) }
 
+function asSentence(string) {
+  string = string.charAt(0).toUpperCase() + string.slice(1)
+  if (string.charAt(string.length - 1) === '.') {
+    return string }
+   else {
+     return string + '.' } }
+
 function stdinTransformCLI(metadata, transform) {
   var name = metadata.name
   var version = metadata.version
   var description = metadata.description
 
   var usage = [
-    description,
+    asSentence(description),
     '',
     'Usage:',
     '  ' + name + ' [<file>]',
