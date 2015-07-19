@@ -43,10 +43,8 @@ and in `cli.js`:
 
 ```javascript
 #!/usr/bin/env node
-var meta = require('./package')
 require('stdin-transform-cli')(
-  meta.name,
-  meta.version,
+  require('./package/json'),
   function(input, callback) {
     // Apply your transformation and invoke
     callback(error, result) })()
