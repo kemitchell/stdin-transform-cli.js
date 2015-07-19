@@ -3,6 +3,13 @@
   "description": "create a command-line interface for any string-to-string transformation",
   "version": "0.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "keywords": [
+    "CLI",
+    "command line",
+    "filter",
+    "transform",
+    "transformation"
+  ],
   "license": "MIT",
   "repository": "kemitchell/stdin-transform-cli.js"
 }
