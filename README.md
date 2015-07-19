@@ -4,11 +4,14 @@ Create a simple command-line interface for any string-to-string transformation
 $ npm install --save stdin-transform-cli
 ```
 
-If your transformation is a synchronous function of the form `function(string)`, add the following to your `package.json`:
+If your transformation is a synchronous function of the form `function(string)`, copy the prebuilt command-line script into your package:
 
 ```shellsession
 $ cp node_modules/stdin-transform-cli/sync.js cli.js
+
 ```
+
+Then reference in `package.json`:
 
 ```json
 {
