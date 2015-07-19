@@ -12,7 +12,6 @@ $ cp node_modules/stdin-transform-cli/sync.js cli.js
 
 ```json
 {
-  "preferGlobal": true,
   "bin": "cli.js"
 }
 ```
@@ -25,7 +24,6 @@ $ cp node_modules/stdin-transform-cli/async.js cli.js
 
 ```json
 {
-  "preferGlobal": true,
   "bin": "cli.js"
 }
 ```
@@ -34,7 +32,6 @@ Otherwise:
 
 ```json
 {
-  "preferGlobal": true,
   "bin": "cli.js"
 }
 ```
