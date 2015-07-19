@@ -7,26 +7,26 @@ $ npm install --save stdin-transform-cli
 If your transformation is a synchronous function of the form `function(string)`, add the following to your `package.json`:
 
 ```shellsession
-$ cp node_modules/stdin-transform-cli/sync.js $YOUR_PACKAGE_NAME
+$ cp node_modules/stdin-transform-cli/sync.js cli.js
 ```
 
 ```json
 {
   "preferGlobal": true,
-  "bin": "$YOUR_PACKAGE_NAME"
+  "bin": "cli.js"
 }
 ```
 
 If your transformation is an asynchronous function of the form `function(string, errorFirstCallback)`:
 
 ```shellsession
-$ cp node_modules/stdin-transform-cli/async.js $YOUR_PACKAGE_NAME
+$ cp node_modules/stdin-transform-cli/async.js cli.js
 ```
 
 ```json
 {
   "preferGlobal": true,
-  "bin": "$YOUR_PACKAGE_NAME"
+  "bin": "cli.js"
 }
 ```
 
