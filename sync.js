@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-var transform = require('../../')
+var transform = require('./')
 require('stdin-transform-cli')(
-  require('../../package'),
+  require('./package'),
   function(input, callback) {
     try {
       callback(null, transform(input)) }
