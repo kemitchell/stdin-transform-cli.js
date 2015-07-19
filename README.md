@@ -8,7 +8,6 @@ If your transformation is a synchronous function of the form `function(string)`,
 
 ```shellsession
 $ cp node_modules/stdin-transform-cli/sync.js cli.js
-
 ```
 
 Then reference in `package.json`:
