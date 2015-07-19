@@ -22,21 +22,7 @@ If your transformation is an asynchronous function of the form `function(string,
 $ cp node_modules/stdin-transform-cli/async.js cli.js
 ```
 
-```json
-{
-  "bin": "cli.js"
-}
-```
-
 Otherwise:
-
-```json
-{
-  "bin": "cli.js"
-}
-```
-
-and in `cli.js`:
 
 ```javascript
 #!/usr/bin/env node
