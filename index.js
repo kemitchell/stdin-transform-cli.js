@@ -1,8 +1,24 @@
+var EOL = require('os').EOL
+
 function fail() {
   process.exit(1) }
 
-function stdinTransformCLI(name, version, transform) {
-  var usage = 'Usage: ' + name + ' < input'
+function stdinTransformCLI(metadata, transform) {
+  var name = metadata.name
+  var version = metadata.version
+  var description = metadata.description
+
+  var usage = [
+    description,
+    '',
+    'Usage:',
+    '  ' + name + ' [<file>]',
+    '  ' + name + ' -h | --help',
+    '  ' + name + ' -v | --version',
+    '',
+    'Options:',
+    '  -h, --help      Show this screen.',
+    '  -v, --version   Show version.' ].join(EOL)
 
   function transformStream(stream) {
     var input = ''
