@@ -8,6 +8,7 @@ If your transformation is a synchronous function of the form `function(string)`,
 
 ```json
 {
+  "preferGlobal": true,
   "bin": "node_modules/stdin-transform-cli/sync.js"
 }
 ```
@@ -16,6 +17,7 @@ If your transformation is an asynchronous function of the form `function(string,
 
 ```json
 {
+  "preferGlobal": true,
   "bin": "node_modules/stdin-transform-cli/async.js"
 }
 ```
@@ -24,6 +26,7 @@ Otherwise:
 
 ```json
 {
+  "preferGlobal": true,
   "bin": "cli.js"
 }
 ```
