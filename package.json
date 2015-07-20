@@ -1,7 +1,7 @@
 {
   "name": "stdin-transform-cli",
   "description": "create a command-line interface for any string-to-string transformation",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "keywords": [
     "CLI",
