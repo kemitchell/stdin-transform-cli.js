@@ -1,36 +1,28 @@
-Create a simple command-line interface for any string-to-string transformation
+Create a simple command-line interface for any string-to-string transformation.
 
 ```shellsession
 $ npm install --save stdin-transform-cli
 ```
 
-If your transformation is a synchronous function of the form `function(string)`, copy the prebuilt command-line script into your package:
-
-```shellsession
-$ cp node_modules/stdin-transform-cli/sync.js cli.js
-```
-
-Then reference in `package.json`:
+If your transformation is a synchronous function of the form `module.exports = function(string) { }`, add the following to your `package.json`:
 
 ```json
-{
-  "bin": "cli.js"
-}
+{ "bin": "node_modules/stdin-transform-cli/sync" }
 ```
 
-If your transformation is an asynchronous function of the form `function(string, errorFirstCallback)`:
+If your transformation is an asynchronous function of the form `module.exports = function(string, errorFirstCallback) { }`:
 
-```shellsession
-$ cp node_modules/stdin-transform-cli/async.js cli.js
+```json
+{ "bin": "node_modules/stdin-transform-cli/async" }
 ```
 
-Otherwise:
+Otherwise, create your own bin script using the JavaScript API:
 
 ```javascript
 #!/usr/bin/env node
 require('stdin-transform-cli')(
   require('./package/json'),
   function(input, callback) {
-    // Apply your transformation and invoke
+    // Require and apply your transformation, then invoke
     callback(error, result) })()
 ```
